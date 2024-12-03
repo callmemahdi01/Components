@@ -1,0 +1,27 @@
+<div class="dark-mode-toggle">
+    <input type="checkbox" class="absolute peer -right-[65rem]" id="dn-toggle-lg" />
+    <label for="dn-toggle-lg" class="toggle relative inline-block h-6 w-12 cursor-pointer overflow-clip rounded-full bg-sky-300 transition-colors duration-200 peer-checked:bg-sky-900 peer-disabled:cursor-not-allowed peer-checked:[&_.crater]:opacity-100 peer-checked:[&_.star-1]:right-2 peer-checked:[&_.star-1]:top-4 peer-checked:[&_.star-1]:h-px peer-checked:[&_.star-1]:w-px peer-checked:[&_.star-2]:right-4 peer-checked:[&_.star-2]:top-2 peer-checked:[&_.star-2]:h-0.5 peer-checked:[&_.star-2]:w-0.5 peer-checked:[&_.star-3]:right-2 peer-checked:[&_.star-3]:top-3 peer-checked:[&_.star-3]:h-1 peer-checked:[&_.star-3]:w-1 peer-checked:[&_.star-4]:right-4 peer-checked:[&_.star-4]:top-4 peer-checked:[&_.star-4]:h-0.5 peer-checked:[&_.star-4]:w-0.5 peer-checked:[&_.toggle-handler]:right-6 peer-checked:[&_.toggle-handler]:translate-x-0 peer-checked:[&_.toggle-handler]:rotate-0 peer-checked:[&_.toggle-handler]:bg-amber-100">
+        <span class="toggle-handler relative right-0.5 top-0.5 z-10 inline-block h-5 w-5 -rotate-45 rounded-full bg-amber-300 shadow-md transition-all duration-[400ms]">
+            <span class="absolute w-1 h-1 transition-opacity duration-200 rounded-full opacity-0 crater right-1 top-3 bg-amber-200"></span>
+            <span class="crater absolute right-2 top-4 h-1 w-1 rounded-full bg-amber-200 opacity-0 transition-opacity duration-200"></span>
+            <span class="crater absolute right-2.5 top-2 h-1.5 w-1.5 rounded-full bg-amber-200 opacity-0 transition-opacity duration-200"></span>
+        </span>
+
+        <span class="absolute w-5 h-5 transition-all duration-300 bg-white rounded-full star-1 right-1 top-5"></span>
+        <span class="absolute w-4 h-4 transition-all duration-300 bg-white rounded-full star-2 right-3 top-4"></span>
+        <span class="absolute transition-all duration-300 bg-white rounded-full star-3 right-5 top-4 h-5 w-5"></span>
+        <span class="star-4 absolute right-[2rem] top-3 h-4 w-4 rounded-full bg-white transition-all duration-300"></span>
+
+        <span class="sr-only">toggle switch</span>
+    </label>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('dn-toggle-lg');
+    
+    darkModeToggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark');
+    });
+});
+</script>
